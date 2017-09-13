@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Algorithms</title>
+<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+function isPrime(n){
+	var divisor = 2;
+	while( n > divisor){
+		if(n % divisor == 0){
+			return false;
+		}
+		else
+			divisor++;
+	}
+	return true;
+}
+
+//Find all the Prime Factors of a number
+
+// function primeFactors(n){
+// 	var factors = [],
+// 		divisor = 2;
+
+// 	while(n > 2){
+// 		if(n % divisor == 0){
+// 			factors.push(divisor);
+// 			n = n / divisor;
+// 		}
+// 		else{
+// 			divisor++;
+// 		}
+// 	}
+// 	return factors;
+// }
+
+
+//Fibonacci recursive run complexity is O(2^n)
+
+// function fibonacci(n){
+// 	if(n <= 1)
+// 		return n;
+// 	else
+// 		return fibonacci(n - 1) + fibonacci(n - 2);
+// }
+
+//Greatest Common Divisor of two numbers
+
+// function greatestCommonDivisor(a, b){
+// 	var divisor = 2,
+// 		greatestDivisor = 1;
+
+// 	if(a < 2 || b < 2)
+// 		return 1;
+
+// 	while(a >= divisor && b >= divisor){
+// 		if(a % divisor == 0 && b % divisor == 0){
+// 			greatestDivisor = divisor;
+// 		}
+// 		divisor++;
+// 	}
+// 	return greatestDivisor;
+
+// }
+
+//Another supposedly simpler way to do it, try to wrap your head around this one
+
+// function greatestCommonDivisor(a, b){
+// 	if(b == 0)
+// 		return a;
+// 	else
+// 		return greatestCommonDivisor(b, a%b);
+// }
+
+//Remove Duplicates from an array
+
+// function removeDuplicate(arr){
+// 	var exists = {},
+// 	outArr = [],
+// 	elm;
+
+// 	for(var i = 0; i < arr.length; i++){
+// 		elm = arr[i];
+// 		if(!exists[elm]){
+// 			outArr.push(elm);
+// 			exists[elm] = true;
+// 		}
+// 	}
+// 	return outArr;
+// }
+
+//Swap numbers without using a temp variable
+
+// function swapNumb(a, b){
+
+// 	console.log('before swap: ', 'a: ', a, 'b: ', b);
+
+// 	b = b - a;
+// 	a = a + b;
+// 	b = a - b;
+// 	console.log('after swap: ', 'a: ', a, 'b: ', b);
+// }
+
+//Swap numbers done with Bit Manipulation
+
+// function swapNumb(a, b){
+// 	console.log("a: " + a + " and b: " + b);
+// 	a = a ^ b;
+// 	b = a ^ b;
+// 	a = a ^ b;
+// 	console.log("a: " + a + " and b: " + b);
+// }
+
+//Very Interesting, look into logical conjunction
+
+//String Reverse
+
+// function reverse(str){
+// 	var rtnStr = '';
+// 	for(var i = str.length - 1; i >= 0; i--){
+// 		rtnStr += str[i];
+// 	}
+// 	return rtnStr;
+	
+// }
+
+
+//Recursive String Reverse
+
+// function reverse(str){
+// 	if(str === ""){
+// 		return "";
+// 	} else {
+// 		return reverse(str.substr(1)) + str.charAt(0);
+// 	}
+// }
+
+//Reverse Words in a Sentence
+
+// function reverseWords(str){
+// 	var rev = [],
+// 		wordLen = 0;
+// 	for(var i = str.length - 1; i >= 0; i--){
+// 		if(str[i] == ' ' || i == 0){
+// 			rev.push(str.substr(i, wordLen + 1));
+// 			wordLen = 0;
+// 		}
+// 		else
+// 			wordLen++;
+// 	}
+// 	return rev.join(' ');
+// }
+
+//Reverse Words quick solution using string split reverse function
+
+// function reverseWords(str){
+// 	return str.split(' ').reverse();
+// }
+
+//String reverse in place
+
+// function reverseInPlace(str){
+// 	return str.split(' ').reverse().join(' ').split('').reverse().join('');
+// }
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div class="col-md-4">
+	<h1>Check if Number is Prime</h1>
+	<form id="frm1" action="/action_page.php" target="_self">
+  First name: <input type="text" name="fname" value=""><br>
+  Last name: <input type="text" name="lname" value=""><br><br>
+  <input type="submit" value="Submit">
+	</form>
+
+	<p>Click "Try it" to display the target of the form:</p>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script>
+	function myFunction() {
+    	var x = document.getElementById("frm1").target;
+    	document.getElementById("demo").innerHTML = x;
+	}
+	</script>
+		
+
+
+
+
+
+	</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
